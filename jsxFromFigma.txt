@@ -1,0 +1,192 @@
+<div style={{width: 1440, height: 125, paddingTop: 32, paddingBottom: 32, paddingLeft: 64, paddingRight: 32, background: 'white', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'inline-flex'}}>
+  <div style={{flex: '1 1 0', height: 61, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
+    <div style={{flex: '1 1 0', height: 61, paddingTop: 8, paddingBottom: 8, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex'}}>
+      <div data-svg-wrapper style={{position: 'relative'}}>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="black"/>
+      </svg>
+      </div>
+      <div style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
+        <div style={{alignSelf: 'stretch', color: 'black', fontSize: 16, fontFamily: 'Open Sans', fontWeight: '600', lineHeight: 24, wordWrap: 'break-word'}}>Life Coaching</div>
+        <div style={{alignSelf: 'stretch', color: 'black', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', lineHeight: 21, wordWrap: 'break-word'}}>Transform your life with expert guidance.</div>
+      </div>
+    </div>
+    <div style={{flex: '1 1 0', height: 61, paddingTop: 8, paddingBottom: 8, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex'}}>
+      <div data-svg-wrapper style={{position: 'relative'}}>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="black"/>
+      </svg>
+      </div>
+      <div style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
+        <div style={{alignSelf: 'stretch', color: 'black', fontSize: 16, fontFamily: 'Open Sans', fontWeight: '600', lineHeight: 24, wordWrap: 'break-word'}}>Dating Coaching</div>
+        <div style={{alignSelf: 'stretch', color: 'black', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', lineHeight: 21, wordWrap: 'break-word'}}>Find love with personalized coaching.</div>
+      </div>
+    </div>
+    <div style={{flex: '1 1 0', height: 61, paddingTop: 8, paddingBottom: 8, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex'}}>
+      <div data-svg-wrapper style={{position: 'relative'}}>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="black"/>
+      </svg>
+      </div>
+      <div style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
+        <div style={{alignSelf: 'stretch', color: 'black', fontSize: 16, fontFamily: 'Open Sans', fontWeight: '600', lineHeight: 24, wordWrap: 'break-word'}}>Testimonials</div>
+        <div style={{alignSelf: 'stretch', color: 'black', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', lineHeight: 21, wordWrap: 'break-word'}}>Hear from our happy clients.</div>
+      </div>
+    </div>
+    <div style={{flex: '1 1 0', height: 61, paddingTop: 8, paddingBottom: 8, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex'}}>
+      <div data-svg-wrapper style={{position: 'relative'}}>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="black"/>
+      </svg>
+      </div>
+      <div style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
+        <div style={{alignSelf: 'stretch', color: 'black', fontSize: 16, fontFamily: 'Open Sans', fontWeight: '600', lineHeight: 24, wordWrap: 'break-word'}}>Resources</div>
+        <div style={{alignSelf: 'stretch', color: 'black', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', lineHeight: 21, wordWrap: 'break-word'}}>Explore articles and tips for success.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style={{width: 1440, height: 56, paddingLeft: 64, paddingRight: 64, paddingTop: 16, paddingBottom: 16, background: '#60B374', borderBottom: '1px black solid', justifyContent: 'space-between', alignItems: 'flex-start', display: 'inline-flex'}}>
+  <div style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
+    <div style={{color: 'black', fontSize: 20, fontFamily: 'Open Sans', fontWeight: '400', lineHeight: 30, wordWrap: 'break-word'}}>Ready to change your life?</div>
+    <div style={{color: 'black', fontSize: 16, fontFamily: 'Roboto', fontWeight: '400', textDecoration: 'underline', lineHeight: 24, wordWrap: 'break-word'}}>Contact Us</div>
+  </div>
+</div>
+<div style={{width: 1440, height: 865, paddingLeft: 64, paddingRight: 64, paddingTop: 112, paddingBottom: 112, background: 'white', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 80, display: 'inline-flex'}}>
+  <div style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', gap: 80, display: 'inline-flex'}}>
+    <div style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'inline-flex'}}>
+      <div style={{alignSelf: 'stretch', height: 494, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
+        <div style={{alignSelf: 'stretch', height: 306, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'flex'}}>
+          <div style={{justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex'}}>
+            <div style={{color: 'black', fontSize: 16, fontFamily: 'Roboto', fontWeight: '600', lineHeight: 24, wordWrap: 'break-word'}}>Transform</div>
+          </div>
+          <div style={{alignSelf: 'stretch', height: 266, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'flex'}}>
+            <div style={{alignSelf: 'stretch', color: 'black', fontSize: 48, fontFamily: 'Quicksand', fontWeight: '700', lineHeight: 57.60, wordWrap: 'break-word'}}>Unlock Your Potential with Anne Heimann</div>
+            <div style={{alignSelf: 'stretch', color: 'black', fontSize: 28, fontFamily: 'Open Sans', fontWeight: '400', lineHeight: 42, wordWrap: 'break-word'}}>Experience a profound shift in your confidence and relationships. Our coaching empowers you to grow personally and connect deeply.</div>
+          </div>
+        </div>
+        <div style={{alignSelf: 'stretch', height: 156, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'flex'}}>
+          <div style={{alignSelf: 'stretch', paddingTop: 8, paddingBottom: 8, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'inline-flex'}}>
+            <div style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'inline-flex'}}>
+              <div style={{alignSelf: 'stretch', color: 'black', fontSize: 24, fontFamily: 'Quicksand', fontWeight: '700', lineHeight: 33.60, wordWrap: 'break-word'}}>Boost Confidence</div>
+              <div style={{alignSelf: 'stretch', color: 'black', fontSize: 20, fontFamily: 'Open Sans', fontWeight: '400', lineHeight: 30, wordWrap: 'break-word'}}>Gain the self-assurance to pursue your dreams and forge meaningful connections.</div>
+            </div>
+            <div style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'inline-flex'}}>
+              <div style={{alignSelf: 'stretch', color: 'black', fontSize: 24, fontFamily: 'Quicksand', fontWeight: '700', lineHeight: 33.60, wordWrap: 'break-word'}}>Enhance Relationships</div>
+              <div style={{alignSelf: 'stretch', color: 'black', fontSize: 20, fontFamily: 'Open Sans', fontWeight: '400', lineHeight: 30, wordWrap: 'break-word'}}>Learn to communicate effectively and build lasting, fulfilling relationships.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{justifyContent: 'flex-start', alignItems: 'center', gap: 24, display: 'inline-flex'}}>
+        <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 12, paddingBottom: 12, background: 'black', border: '1px white solid', justifyContent: 'center', alignItems: 'center', gap: 8, display: 'flex'}}>
+          <div style={{color: 'white', fontSize: 20, fontFamily: 'Roboto Mono', fontWeight: '700', lineHeight: 30, wordWrap: 'break-word'}}>Learn More</div>
+        </div>
+        <div style={{justifyContent: 'center', alignItems: 'center', gap: 8, display: 'flex'}}>
+          <div style={{color: 'black', fontSize: 20, fontFamily: 'Roboto Mono', fontWeight: '700', lineHeight: 30, wordWrap: 'break-word'}}>Sign Up</div>
+          <div data-svg-wrapper style={{position: 'relative'}}>
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.70697 17.6038L15.414 11.8968L9.70697 6.18982L8.29297 7.60382L12.586 11.8968L8.29297 16.1898L9.70697 17.6038Z" fill="black"/>
+          </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img style={{width: 618, height: 641}} src="https://placehold.co/618x641" />
+  </div>
+</div>
+<div style={{width: 1440, height: 870, paddingLeft: 64, paddingRight: 64, paddingTop: 112, paddingBottom: 112, background: 'white', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 80, display: 'inline-flex'}}>
+  <div style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 80, display: 'inline-flex'}}>
+    <div style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'inline-flex'}}>
+      <div style={{alignSelf: 'stretch', color: 'black', fontSize: 40, fontFamily: 'Quicksand', fontWeight: '700', lineHeight: 48, wordWrap: 'break-word'}}>Unlock Your Potential with Our Comprehensive Coaching Services</div>
+    </div>
+    <div style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'inline-flex'}}>
+      <div style={{alignSelf: 'stretch', color: 'black', fontSize: 28, fontFamily: 'Open Sans', fontWeight: '400', lineHeight: 42, wordWrap: 'break-word'}}>Our personalized coaching sessions are designed to help you navigate the complexities of dating and relationships. Join our engaging workshops to gain practical skills and insights. Explore our extensive online resources for ongoing support and guidance.</div>
+    </div>
+  </div>
+  <div style={{alignSelf: 'stretch', height: 314, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 64, display: 'flex'}}>
+    <div style={{alignSelf: 'stretch', justifyContent: 'center', alignItems: 'flex-start', gap: 48, display: 'inline-flex'}}>
+      <div style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'inline-flex'}}>
+        <div style={{alignSelf: 'stretch', height: 224, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'flex'}}>
+          <div data-svg-wrapper style={{position: 'relative'}}>
+          <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M41.46 14.3943L41.18 13.8943C40.8188 13.2897 40.3094 12.7872 39.7 12.4343L26.28 4.6943C25.6724 4.3418 24.9826 4.15554 24.28 4.1543H23.7C22.9974 4.15554 22.3076 4.3418 21.7 4.6943L8.28 12.4543C7.67394 12.8048 7.17052 13.3082 6.82 13.9143L6.54 14.4143C6.1875 15.022 6.00124 15.7118 6 16.4143V31.9143C6.00124 32.6169 6.1875 33.3067 6.54 33.9143L6.82 34.4143C7.17958 35.0133 7.68098 35.5147 8.28 35.8743L21.72 43.6143C22.3246 43.9741 23.0164 44.1609 23.72 44.1543H24.28C24.9826 44.1531 25.6724 43.9669 26.28 43.6143L39.7 35.8543C40.312 35.5117 40.8174 35.0063 41.16 34.3943L41.46 33.8943C41.8082 33.2849 41.9942 32.5963 42 31.8943V16.3943C41.9988 15.6918 41.8126 15.002 41.46 14.3943ZM23.7 8.1543H24.28L36 14.9143L24 21.8343L12 14.9143L23.7 8.1543ZM26 39.1543L37.7 32.3943L38 31.8943V18.3743L26 25.3143V39.1543Z" fill="black"/>
+          </svg>
+          </div>
+          <div style={{alignSelf: 'stretch', color: 'black', fontSize: 24, fontFamily: 'Quicksand', fontWeight: '700', lineHeight: 33.60, wordWrap: 'break-word'}}>Transform Your Life with Tailored Coaching and Workshops</div>
+          <div style={{alignSelf: 'stretch', color: 'black', fontSize: 20, fontFamily: 'Open Sans', fontWeight: '400', lineHeight: 30, wordWrap: 'break-word'}}>Experience growth and empowerment through our expert-led services.</div>
+        </div>
+        <div style={{alignSelf: 'stretch', height: 24, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
+          <div style={{justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
+            <div style={{color: 'black', fontSize: 16, fontFamily: 'Roboto', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>Learn More</div>
+            <div data-svg-wrapper style={{position: 'relative'}}>
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.70697 17.1039L15.414 11.3969L9.70697 5.68994L8.29297 7.10394L12.586 11.3969L8.29297 15.6899L9.70697 17.1039Z" fill="black"/>
+            </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'inline-flex'}}>
+        <div style={{alignSelf: 'stretch', height: 224, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'flex'}}>
+          <div data-svg-wrapper style={{position: 'relative'}}>
+          <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M41.7932 14.3943L41.5132 13.8943C41.152 13.2897 40.6426 12.7872 40.0332 12.4343L26.6132 4.6943C26.0056 4.3418 25.3158 4.15554 24.6132 4.1543H24.0332C23.3306 4.15554 22.6408 4.3418 22.0332 4.6943L8.61325 12.4543C8.00719 12.8048 7.50377 13.3082 7.15325 13.9143L6.87325 14.4143C6.52075 15.022 6.33449 15.7118 6.33325 16.4143V31.9143C6.33449 32.6169 6.52075 33.3067 6.87325 33.9143L7.15325 34.4143C7.51283 35.0133 8.01423 35.5147 8.61325 35.8743L22.0532 43.6143C22.6578 43.9741 23.3496 44.1609 24.0532 44.1543H24.6132C25.3158 44.1531 26.0056 43.9669 26.6132 43.6143L40.0332 35.8543C40.6452 35.5117 41.1506 35.0063 41.4932 34.3943L41.7932 33.8943C42.1414 33.2849 42.3274 32.5963 42.3332 31.8943V16.3943C42.332 15.6918 42.1458 15.002 41.7932 14.3943ZM24.0332 8.1543H24.6132L36.3332 14.9143L24.3332 21.8343L12.3332 14.9143L24.0332 8.1543ZM26.3332 39.1543L38.0332 32.3943L38.3332 31.8943V18.3743L26.3332 25.3143V39.1543Z" fill="black"/>
+          </svg>
+          </div>
+          <div style={{alignSelf: 'stretch', color: 'black', fontSize: 24, fontFamily: 'Quicksand', fontWeight: '700', lineHeight: 33.60, wordWrap: 'break-word'}}>Engage with Our Community for Lasting Connections and Support</div>
+          <div style={{alignSelf: 'stretch', color: 'black', fontSize: 20, fontFamily: 'Open Sans', fontWeight: '400', lineHeight: 30, wordWrap: 'break-word'}}>Join our community to connect with like-minded individuals on your journey.</div>
+        </div>
+        <div style={{alignSelf: 'stretch', height: 24, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
+          <div style={{justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
+            <div style={{color: 'black', fontSize: 16, fontFamily: 'Roboto', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>Sign Up</div>
+            <div data-svg-wrapper style={{position: 'relative'}}>
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.0402 17.1039L15.7472 11.3969L10.0402 5.68994L8.62622 7.10394L12.9192 11.3969L8.62622 15.6899L10.0402 17.1039Z" fill="black"/>
+            </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'inline-flex'}}>
+        <div style={{alignSelf: 'stretch', height: 258, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'flex'}}>
+          <div data-svg-wrapper style={{position: 'relative'}}>
+          <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M42.1265 14.3943L41.8465 13.8943C41.4853 13.2897 40.9759 12.7872 40.3665 12.4343L26.9465 4.6943C26.3389 4.3418 25.6491 4.15554 24.9465 4.1543H24.3665C23.6639 4.15554 22.9741 4.3418 22.3665 4.6943L8.9465 12.4543C8.34044 12.8048 7.83702 13.3082 7.4865 13.9143L7.2065 14.4143C6.854 15.022 6.66774 15.7118 6.6665 16.4143V31.9143C6.66774 32.6169 6.854 33.3067 7.2065 33.9143L7.4865 34.4143C7.84608 35.0133 8.34748 35.5147 8.9465 35.8743L22.3865 43.6143C22.9911 43.9741 23.6829 44.1609 24.3865 44.1543H24.9465C25.6491 44.1531 26.3389 43.9669 26.9465 43.6143L40.3665 35.8543C40.9785 35.5117 41.4839 35.0063 41.8265 34.3943L42.1265 33.8943C42.4747 33.2849 42.6607 32.5963 42.6665 31.8943V16.3943C42.6653 15.6918 42.4791 15.002 42.1265 14.3943ZM24.3665 8.1543H24.9465L36.6665 14.9143L24.6665 21.8343L12.6665 14.9143L24.3665 8.1543ZM26.6665 39.1543L38.3665 32.3943L38.6665 31.8943V18.3743L26.6665 25.3143V39.1543Z" fill="black"/>
+          </svg>
+          </div>
+          <div style={{alignSelf: 'stretch', color: 'black', fontSize: 24, fontFamily: 'Quicksand', fontWeight: '700', lineHeight: 33.60, wordWrap: 'break-word'}}>Access Valuable Online Resources for Continuous Learning and Growth</div>
+          <div style={{alignSelf: 'stretch', color: 'black', fontSize: 20, fontFamily: 'Open Sans', fontWeight: '400', lineHeight: 30, wordWrap: 'break-word'}}>Utilize our curated resources to enhance your dating skills and knowledge.</div>
+        </div>
+        <div style={{alignSelf: 'stretch', height: 24, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
+          <div style={{justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
+            <div style={{color: 'black', fontSize: 16, fontFamily: 'Roboto', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>Explore</div>
+            <div data-svg-wrapper style={{position: 'relative'}}>
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.3735 17.1039L16.0805 11.3969L10.3735 5.68994L8.95947 7.10394L13.2525 11.3969L8.95947 15.6899L10.3735 17.1039Z" fill="black"/>
+            </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style={{width: 1440, height: 971, background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%)', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
+  <div style={{width: 1438, height: 847, border: '1px solid', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 237, display: 'inline-flex'}}>
+    <div style={{flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 24, display: 'flex'}}>
+      <div style={{width: 798, textAlign: 'center', color: 'white', fontSize: 80, fontFamily: 'Quicksand', fontWeight: '700', lineHeight: 96, wordWrap: 'break-word'}}>Transform Your Life and Love Today</div>
+      <div style={{width: 768, height: 194, paddingBottom: 26, justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
+        <div style={{width: 768, textAlign: 'center', color: 'white', fontSize: 28, fontFamily: 'Open Sans', fontWeight: '400', lineHeight: 42, wordWrap: 'break-word'}}>Unlock your potential and find true connection with expert guidance from a dedicated life and dating coach. Discover practical strategies to enhance your relationships and achieve personal growth.</div>
+      </div>
+    </div>
+    <div style={{justifyContent: 'flex-end', alignItems: 'flex-start', gap: 2, display: 'inline-flex'}}>
+      <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 12, paddingBottom: 12, background: 'white', border: '1px white solid', justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
+        <div style={{color: 'black', fontSize: 20, fontFamily: 'Roboto Mono', fontWeight: '700', lineHeight: 30, wordWrap: 'break-word'}}>Learn More</div>
+      </div>
+      <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 12, paddingBottom: 12, border: '1px white solid', justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
+        <div style={{color: 'white', fontSize: 20, fontFamily: 'Roboto Mono', fontWeight: '700', lineHeight: 30, wordWrap: 'break-word'}}>Sign Up</div>
+      </div>
+    </div>
+  </div>
+</div>
