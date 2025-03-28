@@ -6,9 +6,11 @@ const config = {
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   apiVersion: '2024-02-17',
+  // Always use real-time data with no CDN caching
   useCdn: false,
   perspective: 'published',
   token: process.env.SANITY_API_TOKEN, // Add this if you have a token
+  // Disable stega for now as it's causing issues
   stega: false
 }
 
@@ -35,21 +37,16 @@ export async function getHeroContent() {
       secondaryButtonLink,
       heroImage
     }`
+    
+    // Always get fresh data with no caching
+    const cacheOptions = {
+      next: { revalidate: 0 },
+      cache: 'no-store'
+    };
+    
+    const data = await client.fetch(query, {}, cacheOptions);
 
-    // console.log('Executing query:', query);
-   
-  const data = await client.fetch(query, {}, {
-  cache: 'no-store'  // Add this to disable caching
-  
-});
-
-
-
-// console.log('Raw Sanity response:', data);
     // If no data exists yet, return fallback data
-
-
-
     if (!data) {
       console.log('No data found, using fallback');
       return {
@@ -98,7 +95,15 @@ export async function getTransformBannerContent() {
       description,
       backgroundImage,
       primaryButton,
-      secondaryButton
+      secondaryButton,
+      textPosition,
+      textBackdrop,
+      backdropStyle {
+        opacity,
+        blur,
+        shape,
+        glow
+      }
     }`
     const data = await client.fetch(query)
     console.log('Transform Banner data:', data)
@@ -173,6 +178,32 @@ export async function testSanityConnection() {
     return data;
   } catch (error) {
     console.error('Sanity connection error:', error);
+    return null;
+  }
+}
+
+// Get theme settings
+export async function getThemeSettings() {
+  try {
+    const query = `*[_type == "themeSettings"][0]`;
+    
+    // Theme settings particularly need to be up to date
+    const cacheOptions = {
+      // In development, don't cache
+      // In production, use cache but allow webhook revalidation
+      next: { revalidate: process.env.NODE_ENV === 'production' ? 60 : 0 },
+      tags: ['themeSettings'] // Add a tag for targeted revalidation
+    };
+    
+    const data = await client.fetch(query, {}, cacheOptions);
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Theme settings:', data);
+    }
+    
+    return data;
+  } catch (error) {
+    console.error('Error fetching theme settings:', error);
     return null;
   }
 }

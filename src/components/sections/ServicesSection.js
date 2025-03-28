@@ -1,49 +1,35 @@
-"use client"  
+"use client";
 
 import React, { useState } from 'react';
 import Typography from '../ui/Typography';
 import Container from '../ui/Container';
-import { ArrowRight, Mountain, HeartHandshake, LayoutList, Star, Target, 
-  Lightbulb, Compass, Book, GraduationCap, Heart, Sparkles, RefreshCcw, 
-  Palette, HelpCircle, Wand2 } from 'lucide-react';
+import {
+  ArrowRight, Mountain, HeartHandshake, LayoutList, Star, Target,
+  Lightbulb, Compass, Book, GraduationCap, Heart, Sparkles, RefreshCcw,
+  Palette, HelpCircle, Wand2
+} from 'lucide-react';
 
 const iconMap = {
-  Mountain,
-  HeartHandshake,
-  LayoutList,
-  Star,
-  Target,
-  Lightbulb,
-  Compass,
-  Book,
-  GraduationCap,
-  Heart,
-  Sparkles,
-  RefreshCcw,
-  Palette,
-  HelpCircle,
-  Wand2
-}
+  Mountain, HeartHandshake, LayoutList, Star, Target, Lightbulb,
+  Compass, Book, GraduationCap, Heart, Sparkles, RefreshCcw,
+  Palette, HelpCircle, Wand2
+};
 
 const ServiceCard = ({ title, description, actionText, Icon }) => {
   const [wiggleState, setWiggleState] = useState('idle');
 
   const handleMouseEnter = () => {
     setWiggleState('wiggleRight');
-    setTimeout(() => {
-      setWiggleState('hold');
-    }, 300);
+    setTimeout(() => setWiggleState('hold'), 300);
   };
 
   const handleMouseLeave = () => {
     setWiggleState('wiggleLeft');
-    setTimeout(() => {
-      setWiggleState('idle');
-    }, 300);
+    setTimeout(() => setWiggleState('idle'), 300);
   };
 
   const getIconStyles = () => {
-    switch(wiggleState) {
+    switch (wiggleState) {
       case 'wiggleRight':
         return 'animate-[wiggleToRight_0.3s_ease-in-out_forwards]';
       case 'hold':
@@ -56,32 +42,31 @@ const ServiceCard = ({ title, description, actionText, Icon }) => {
   };
 
   return (
-    <div 
-      className="flex-1 flex flex-col gap-8 p-8 bg-background hover:bg-surface rounded-lg transition-all duration-300 hover:shadow-lg"
+    <div
+      className="flex-1 flex flex-col gap-8 p-8 bg-background hover:bg-surface shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-0"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <div className="flex flex-col gap-6">
         <div className="relative w-12 h-12">
-          <Icon 
-            className={`w-12 h-12 text-primary transition-none absolute left-0 
-              ${getIconStyles()}`}
-            strokeWidth={1.5} 
+          <Icon
+            className={`w-12 h-12 text-primary transition-none absolute left-0 ${getIconStyles()}`}
+            strokeWidth={1.5}
           />
         </div>
-        
+
         <Typography variant="h4" className="max-w-sm">
           {title}
         </Typography>
-        
+
         <Typography variant="body-large" className="max-w-md">
           {description}
         </Typography>
       </div>
-      
+
       <div className="flex items-center gap-2 group cursor-pointer mt-auto">
-        <Typography 
-          variant="label" 
+        <Typography
+          variant="label"
           className="text-base transition-colors duration-300 group-hover:text-accent"
         >
           {actionText}
@@ -93,10 +78,9 @@ const ServiceCard = ({ title, description, actionText, Icon }) => {
 };
 
 const ServicesSection = ({ data }) => {
-  // Default content
   const content = {
     mainHeading: data?.mainHeading || "Unlock Your Potential with Our Comprehensive Coaching Services",
-    description: data?.description || "Our personalized coaching sessions are designed to help you navigate the complexities of dating and relationships. Join our engaging workshops to gain practical skills and insights. Explore our extensive online resources for ongoing support and guidance.",
+    description: data?.description || "Our personalized coaching sessions are designed to help you navigate the complexities of dating and relationships.",
     services: data?.services || [
       {
         title: "Transform Your Life with Tailored Coaching and Workshops",
@@ -128,7 +112,7 @@ const ServicesSection = ({ data }) => {
               {content.mainHeading}
             </Typography>
           </div>
-          
+
           <div className="flex-1">
             <Typography variant="body-large">
               {content.description}

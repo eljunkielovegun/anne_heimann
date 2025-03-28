@@ -1,11 +1,11 @@
 // src/app/page.js
-import HeroSection from '@/components/sections/HeroSection'
-import ServicesNav from '@/components/ui/ServicesNav'
-import CTABanner from '@/components/ui/CTABanner'
-import ServicesSection from '@/components/sections/ServicesSection'
-import TransformBanner from '@/components/sections/TransformBanner'
-import ContactForm from '@/components/sections/ContactForm'
-import Footer from '@/components/ui/Footer'
+import ClientServicesNav from '@/components/ui/ClientServicesNav'
+import ClientTransformBanner from '@/components/ui/ClientTransformBanner'
+import ClientHeroSection from '@/components/ui/ClientHeroSection'
+import ClientCTABanner from '@/components/ui/ClientCTABanner'
+import ClientServicesSection from '@/components/ui/ClientServicesSection'
+import ClientContactForm from '@/components/ui/ClientContactForm'
+import ClientFooter from '@/components/ui/ClientFooter'
 import { 
   getHeroContent, 
   getServicesNavContent,
@@ -15,8 +15,11 @@ import {
   getContactFormContent 
 } from '@/lib/sanity'
 
-export const dynamic = 'force-dynamic'
-export const revalidate = 0  // This will make the page revalidate on every request
+// Disable Next.js data cache completely to ensure fresh data on every request
+// This ensures we always get the latest data when webhook revalidation happens
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+export const revalidate = 0;
 
 export default async function Home() {
   const heroData = await getHeroContent()
@@ -27,14 +30,19 @@ export default async function Home() {
   const contactFormData = await getContactFormContent()
 
   return (
+    
     <div className="w-full flex flex-col items-center">
-      <ServicesNav data={servicesNavData} />
-      <TransformBanner data={transformBannerData} />
-      <HeroSection data={heroData} />
-      <CTABanner data={ctaBannerData} />
-      <ServicesSection data={servicesSectionData} />
-      <ContactForm data={contactFormData} />
-      <Footer />
+ 
+   
+      {/* Client-side only component wrapped in a Client Component */}
+      <ClientServicesNav data={servicesNavData} />
+      <ClientTransformBanner data={transformBannerData} />
+      <ClientHeroSection data={heroData} />
+      {/* <ClientCTABanner data={ctaBannerData} /> */}
+      <ClientServicesSection data={servicesSectionData} />
+      <ClientContactForm data={contactFormData} />
+      <ClientFooter />
     </div>
+    
   )
 }

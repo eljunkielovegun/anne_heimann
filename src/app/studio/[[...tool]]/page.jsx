@@ -5,6 +5,7 @@ import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from '@/schemas'
+import { colorInput } from '@sanity/color-input'
 
 const config = defineConfig({
   name: 'default',
@@ -15,7 +16,7 @@ const config = defineConfig({
   schema: {
     types: schemaTypes,
   },
-  plugins: [deskTool(), visionTool()],
+  plugins: [deskTool(), visionTool(), colorInput()],
   document: {
     // You can add custom document actions here if needed
     actions: []

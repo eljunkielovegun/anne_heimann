@@ -1,5 +1,4 @@
-import { hero } from '../../schemas/hero'
+// src/sanity/schemaTypes/index.js
+import schemaTypes from '../../schemas'
 
-export const schema = {
-  types: [hero],
-}
+export default schemaTypes

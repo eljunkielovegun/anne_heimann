@@ -6,9 +6,12 @@
 
   /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    missingSuspenseWithCSRBailout: false, // This is the React 18.3 fallback
-  }
+  images: {
+    domains: ['cdn.sanity.io'],
+  },
+
+ 
 }
 
 export default nextConfig
+

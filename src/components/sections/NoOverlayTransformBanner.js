@@ -7,7 +7,8 @@ import { siteImages } from '@/config/images';
 import Image from '@/components/ui/Image';
 import { urlFor } from '@/sanity/lib/image';
 
-const TransformBanner = ({ data }) => {
+// This is an exact copy of TransformBanner but with the overlay removed
+const NoOverlayTransformBanner = ({ data }) => {
   const content = {
     mainHeading: data?.mainHeading || "Transform Your Life and Love Today",
     description: data?.description || "Unlock your potential and find true connection with expert guidance from a dedicated life and dating coach.",
@@ -29,16 +30,14 @@ const TransformBanner = ({ data }) => {
     <div className="w-full relative">
       <div className="w-full h-[600px] md:h-[800px] lg:h-[971px] relative flex items-center justify-center overflow-hidden">
         {mainImageUrl ? (
-          <>
-            <Image
-              src={mainImageUrl}
-              alt={content.backgroundImage?.alt || "Transform your life"}
-              fill
-              priority
-              className="object-cover"
-              sizes="100vw"
-            />
-          </>
+          <Image
+            src={mainImageUrl}
+            alt={content.backgroundImage?.alt || "Transform your life"}
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
         ) : (
           <Image
             src={siteImages.primary}
@@ -91,4 +90,4 @@ const TransformBanner = ({ data }) => {
   );
 };
 
-export default TransformBanner;
+export default NoOverlayTransformBanner;
