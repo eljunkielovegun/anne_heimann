@@ -3,7 +3,7 @@ import { colorInput } from '@sanity/color-input'
 import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
 import { structure } from './src/sanity/structure'
-import { media } from 'sanity-plugin-media' // You may need to install this
+import { media } from 'sanity-plugin-media'
 import { sanityRevalidate } from './src/sanity/plugins/sanityRevalidate'
 
 // Import schema types
