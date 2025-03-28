@@ -80,17 +80,8 @@ export async function GET() {
     });
     await writer.write(encoder.encode(`data: ${initialMessage}\n\n`));
     
-    // After sending initial message, check for immediate revalidation
-    const timestamp = Date.now();
-    if (timestamp - lastRevalidationTime < 5000) {
-      // If there was a revalidation in the last 5 seconds, send a revalidation event too
-      const revalidateMessage = JSON.stringify({ 
-        revalidated: true, 
-        timestamp: Date.now(),
-        reason: 'recent_update' 
-      });
-      await writer.write(encoder.encode(`data: ${revalidateMessage}\n\n`));
-    }
+    // Don't automatically send revalidation messages on connect
+    // Just initialize the connection without triggering a refresh
     
     // Return a readable stream as the response
     return new NextResponse(responseStream.readable, {

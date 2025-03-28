@@ -15,19 +15,45 @@ export default function ClientWrapper({ children }) {
   
   // Use a ref to track if we're mounted to avoid memory leaks
   const isMountedRef = useRef(true);
+  
+  // Add a refresh debounce to prevent multiple refreshes in rapid succession
+  const lastRefreshTimeRef = useRef(0);
+  const isRefreshAllowedRef = useRef(true);
 
-  // Hard reload the page, bypassing cache
+  // Hard reload the page, bypassing cache, with debounce protection
   const forceHardReload = useCallback(() => {
     if (!isMountedRef.current) return;
     
-    console.log('🔄🔄🔄 Forcing hard refresh to get latest content...');
+    // Check if enough time has passed since the last refresh
+    const now = Date.now();
+    const timeSinceLastRefresh = now - lastRefreshTimeRef.current;
+    
+    // Require at least 10 seconds between refreshes
+    if (!isRefreshAllowedRef.current || timeSinceLastRefresh < 10000) {
+      console.log(`Refresh prevented, too soon (${timeSinceLastRefresh}ms since last refresh)`);
+      return;
+    }
+    
+    // Mark that we are refreshing to prevent multiple refreshes
+    lastRefreshTimeRef.current = now;
+    isRefreshAllowedRef.current = false;
+    
+    console.log('🔄 Forcing hard refresh to get latest content...');
     
     // Set a query parameter to avoid cache
     const newUrl = new URL(window.location.href);
-    newUrl.searchParams.set('_vercel_no_cache', Date.now().toString());
+    newUrl.searchParams.set('_vercel_no_cache', now.toString());
     
-    // Force reload with cache bypass
-    window.location.href = newUrl.toString();
+    // Add a small delay before actually reloading
+    setTimeout(() => {
+      // Force reload with cache bypass
+      window.location.href = newUrl.toString();
+    }, 100);
+    
+    // Reset refresh flag after a delay in case the reload fails
+    setTimeout(() => {
+      isRefreshAllowedRef.current = true;
+    }, 15000);
   }, []);
 
   // Check for content updates without causing re-renders
@@ -56,11 +82,11 @@ export default function ClientWrapper({ children }) {
       });
   }, [forceHardReload]);
 
-  // Set up SSE and polling
+  // Set up SSE with polling as fallback
   const setupContentMonitoring = useCallback(() => {
     if (!isMountedRef.current) return;
     
-    // Set up Server-Sent Events
+    // Set up Server-Sent Events (preferred method)
     const setupSSE = () => {
       console.log('Setting up SSE connection for real-time updates...');
       const evtSource = new EventSource('/api/revalidate/listen');
@@ -83,6 +109,15 @@ export default function ClientWrapper({ children }) {
       evtSource.onopen = () => {
         if (isMountedRef.current) {
           console.log('SSE connection established');
+          
+          // If we have an active polling interval, we can clear it
+          // as SSE is working properly
+          if (pollingIntervalRef.current) {
+            console.log('SSE working - disabling redundant polling');
+            clearInterval(pollingIntervalRef.current);
+            pollingIntervalRef.current = null;
+            isPollingRef.current = false;
+          }
         }
       };
       
@@ -102,38 +137,36 @@ export default function ClientWrapper({ children }) {
       evtSourceRef.current = evtSource;
     };
     
-    // Start polling for updates
+    // Start polling for updates (fallback method)
     const startPolling = () => {
       if (!isMountedRef.current || pollingIntervalRef.current) return;
       
       console.log('Starting revalidation polling...');
       
-      // Immediate check
-      checkForContentUpdates();
+      // Delay the first check to avoid an immediate refresh on page load
+      setTimeout(() => {
+        if (isMountedRef.current) {
+          checkForContentUpdates();
+        }
+      }, 3000);
       
-      // Set up interval for subsequent checks
+      // Set up interval for subsequent checks with a longer interval (15 seconds)
       pollingIntervalRef.current = setInterval(() => {
         if (isMountedRef.current) {
           checkForContentUpdates();
         }
-      }, 5000);
+      }, 15000);
     };
     
-    // Start monitoring
+    // Start with SSE - preferred method
     try {
       setupSSE();
-      startPolling(); // Always do both for redundancy
+      // Only start polling as backup if SSE fails
     } catch (err) {
-      console.error('Failed to setup content monitoring:', err);
+      console.error('Failed to setup SSE:', err);
+      // Fallback to polling
+      startPolling();
     }
-    
-    // Manual periodic refresh as a fallback
-    const refreshTimer = setTimeout(() => {
-      if (isMountedRef.current) {
-        console.log('Periodic refresh timer triggered');
-        forceHardReload();
-      }
-    }, 120000); // 2 minutes
     
     // Cleanup function
     return () => {
@@ -148,8 +181,6 @@ export default function ClientWrapper({ children }) {
         clearInterval(pollingIntervalRef.current);
         pollingIntervalRef.current = null;
       }
-      
-      clearTimeout(refreshTimer);
     };
   }, [checkForContentUpdates, forceHardReload]);
 

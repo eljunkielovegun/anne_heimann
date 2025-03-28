@@ -7,7 +7,8 @@ const Container = ({
   noPadding = false,
   ...props
 }) => {
-  const baseStyles = 'w-[90%] mx-auto' // Changed to 90% width with auto margins
+  // Use box-sizing: border-box to ensure consistent handling across browsers
+  const baseStyles = 'box-border w-[90%] mx-auto' 
   
   // Responsive max-widths
   const sizes = {
@@ -22,8 +23,8 @@ const Container = ({
     ? '' 
     : 'px-4 sm:px-6 md:px-8 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-28'
 
-  // Container width constraints based on viewport
-  const constraints = 'min-w-[320px]'
+  // Container width constraints - removed min-width to fix Firefox issue
+  const constraints = 'w-full'
   
   return (
     <div 

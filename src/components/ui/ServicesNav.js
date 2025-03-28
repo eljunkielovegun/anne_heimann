@@ -7,6 +7,7 @@ import {
   Compass, Book, GraduationCap, Heart, Sparkles, RefreshCcw, Palette, HelpCircle, Wand2, Menu, X
 } from 'lucide-react';
 import Typography from './Typography';
+import Container from './Container';
 
 const iconMap = {
   Mountain, HeartHandshake, MessageCircle, LayoutList, Star, Target, Lightbulb,
@@ -112,7 +113,7 @@ const ServicesNav = ({ data }) => {
   ];
 
   return (
-    <div className="w-full bg-[hsl(var(--background))]">
+    <div className="w-full bg-[hsl(var(--background))] box-border">
       <nav
         ref={navRef}
         onMouseEnter={() => setIsNavHovered(true)}
@@ -129,42 +130,56 @@ const ServicesNav = ({ data }) => {
             : 'none'
         }}
       >
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="flex flex-row justify-center gap-10 items-center h-14 px-4 lg:px-16">
+        <Container noPadding size="default" className="py-0 px-4 sm:px-6 md:px-8">
+          <div className="flex flex-row justify-center gap-10 items-center h-14">
             {services.map((service, index) => (
               <div key={service.id || index} className="flex-0">
                 <ServiceLink service={service} onNavigate={handleNavigate} />
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </nav>
 
       <div className="lg:hidden relative z-50">
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="fixed top-4 left-4 z-50 p-2 bg-[hsl(var(--accent))] rounded-md"
-        >
-          {isMobileMenuOpen ? (
-            <X className="w-6 h-6 text-[hsl(var(--primary))]" />
-          ) : (
-            <Menu className="w-6 h-6 text-[hsl(var(--primary))]" />
-          )}
-        </button>
+        <Container noPadding className="py-4 relative">
+          <div className="flex justify-between items-center">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="z-50 p-2 bg-[hsl(var(--accent))] rounded-md"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6 text-[hsl(var(--primary))]" />
+              ) : (
+                <Menu className="w-6 h-6 text-[hsl(var(--primary))]" />
+              )}
+            </button>
+            
+            {/* Optional logo/title placeholder */}
+            <span className="text-[hsl(var(--primary))] font-[var(--font-heading)] font-semibold">
+              Anne Heimann
+            </span>
+            
+            {/* Empty div for flex spacing */}
+            <div className="w-10"></div>
+          </div>
+        </Container>
 
         <div className={`
-          fixed inset-0 bg-[hsl(var(--accent))] transition-transform duration-300 ease-in-out
+          fixed inset-0 bg-[hsl(var(--accent))] transition-transform duration-300 ease-in-out z-40 box-border
           ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
         `}>
-          <div className="pt-20 px-4 space-y-4 flex flex-col items-center justify-center">
-            {services.map((service, index) => (
-              <ServiceLink
-                key={service.id || index}
-                service={service}
-                onNavigate={handleNavigate}
-              />
-            ))}
-          </div>
+          <Container noPadding className="py-0 h-full px-6">
+            <div className="pt-24 space-y-6 flex flex-col items-center justify-start h-full w-full">
+              {services.map((service, index) => (
+                <ServiceLink
+                  key={service.id || index}
+                  service={service}
+                  onNavigate={handleNavigate}
+                />
+              ))}
+            </div>
+          </Container>
         </div>
       </div>
     </div>

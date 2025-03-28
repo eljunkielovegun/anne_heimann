@@ -33,19 +33,7 @@ function getResponseData(clientLastCheck) {
     shouldRevalidate = true;
     reason = 'newer_content_available';
   } 
-  // Case 2: Recent revalidation (within 30 seconds)
-  else if (currentTime - lastRevalidationTime < 30000) {
-    shouldRevalidate = true;
-    reason = 'recent_revalidation';
-  }
-  // Case 3: Check if any revalidation event occurred in the last 60 seconds
-  else {
-    const recentEvents = revalidationHistory.filter(ts => currentTime - ts < 60000);
-    if (recentEvents.length > 0) {
-      shouldRevalidate = true;
-      reason = 'revalidation_in_last_minute';
-    }
-  }
+  // Removed other cases to prevent duplicate refreshes
   
   return {
     lastRevalidation: lastRevalidationTime,

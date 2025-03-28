@@ -64,15 +64,8 @@ export const sanityRevalidate = definePlugin({
               const result = await response.json();
               console.log(`✅ Revalidation successful (attempt ${attempt}):`, result);
               
-              // Make a second request to the poll endpoint to ensure timestamps are updated
-              try {
-                const pollResponse = await fetch(`${revalidateUrl.replace(/\/revalidate$/, '')}/revalidate/poll?force=true&ts=${Date.now()}`);
-                if (pollResponse.ok) {
-                  console.log('✅ Poll endpoint updated');
-                }
-              } catch (pollErr) {
-                console.log('Warning: Poll notification failed:', pollErr);
-              }
+              // The main revalidation endpoint now handles timestamp updates automatically
+              // so additional poll endpoint calls are unnecessary
               
               // Stop trying after success
               break;

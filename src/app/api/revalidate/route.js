@@ -36,15 +36,14 @@ export async function POST(request) {
         case 'contactForm':
           // Revalidate the specific document type
           revalidateTag(body._type);
+          // Also do a page revalidation since these components are on the homepage
+          revalidatePath('/', 'page');
           break;
           
         default:
           // For any other type, just revalidate the home page
           revalidatePath('/', 'page');
       }
-      
-      // Always revalidate the home page to be safe
-      revalidatePath('/', 'page');
       
       // Notify any connected clients to refresh and update polling timestamp
       try {
